@@ -47,7 +47,7 @@ a {
     font-weight: bolder;
 }
 
-a:hover {
+header > p > a:hover {
     text-decoration-line: underline;
 }
 
@@ -122,10 +122,30 @@ footer {
     background-color: #000000;
     text-align: center;
     color: #FFFFFF;
-    padding: 2px;
+    padding: 5px;
 }
 
 footer > p {
     padding:  4px 0px;
     font-size: 16px;
+}
+
+.link-perfil {
+    position: relative;
+}
+
+.link-perfil::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(8, 235, 103, 0.897);
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    transition: all 0.5s ease-out;
+}
+
+.link-perfil:hover::after{
+    width: 100%;
+    transition: all 0.5s ease;   
 }
